@@ -1,0 +1,16 @@
+POST http://localhost:3000/burgers
+Content-Type: application/json
+
+{
+  "name": "Marcelo Borges",
+  "ingredients": [
+    {
+      "name": "meat",
+      "amount": 3
+    }
+  ]
+}
+
+
+###
+GET http://localhost:3000/burgers
