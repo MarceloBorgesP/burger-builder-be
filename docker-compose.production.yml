@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    image: marceloborges/burger-builder-be:latest
+    command: sh -c "sh /home/node/app/.docker/entrypoint.sh"
+
+  db:
+    build: ./.docker/mysql
+    image: marceloborges/burger-builder-db:latest

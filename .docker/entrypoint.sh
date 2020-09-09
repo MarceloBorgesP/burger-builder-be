@@ -1,7 +1,18 @@
 #!/bin/bash
 
-cd /home/node/app
+if [[ $NODE_ENV = "dev" ]]
+then
+  npm install
+fi
 
-npm install
 npm run typeorm migration:run
-npm run start:dev
+
+if [[ $NODE_ENV = "dev" ]]
+then
+  npm run start:dev
+fi
+
+if [[ $NODE_ENV = "prod" ]]
+then
+  npm run start:prod
+fi
